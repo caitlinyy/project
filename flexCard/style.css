@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+    /* add new font family */
+    font-family: "Roboto", sans-serif;
+}
+
+header h1 {
+    /* text-align:center; */
+    color: #4181ee;
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    /* centered layout */
+    display: flex;
+    justify-content: center;
+}
+
+main .container .wrapper {
+    /* the flex items can break into multiple lines,not laid out in a single line and may cause the flex container to overflow */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .container .wrapper .card {
+    max-width: 300px;
+    min-height: 250px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: aquamarine;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
+        rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+
+main .container .wrapper .card:nth-child(2){
+    background-color: lightpink;
+}
+
+main .container .wrapper .card:nth-child(3){
+    background-color: purple;
+}
+main .container .wrapper .card:nth-child(4){
+    background-color: lightskyblue;
+}
+
+.card .card-img img {
+    /* 300-30*2-20*2=240px */
+    width: 100%;
+}
+
+/* .card .card-content .card-description {} */
+
+.card .card-info {
+    /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-info .card-price{
+    border: none;
+    background-color: #555;
+    color:#fff;
+    border-radius: 15px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.card:hover{
+    /* move up */
+   transform: translateY(-8px);
+   /* move right */
+   /* transform: translateX(3px); */
+}
